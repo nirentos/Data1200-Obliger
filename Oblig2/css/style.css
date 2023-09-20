@@ -17,6 +17,15 @@ div {
     margin: auto;
 }
 
+.imageContainer {
+    display: inline-block;
+}
+
+.photographerText {
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
 .header
 {
     color: green
@@ -25,6 +34,7 @@ div {
 h1 {
     margin-top: 0;
     font-style: italic;
+    font-size:xx-large;
 }
 
 h2 {
@@ -33,7 +43,10 @@ h2 {
 }
 
 h3 {
-    font-size: medium;
+    font-size: large;
+}
+h4 {
+    font-size: small;
 }
 
 mark {
