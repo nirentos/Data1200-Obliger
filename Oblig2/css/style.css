@@ -24,6 +24,7 @@ div {
 .photographerText {
     transform: rotate(-90deg);
     display: inline-block;
+    padding-left: 20px;
 }
 
 .header
@@ -47,6 +48,7 @@ h3 {
 }
 h4 {
     font-size: small;
+    color: grey;
 }
 
 mark {
