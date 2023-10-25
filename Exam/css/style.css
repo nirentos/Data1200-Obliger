@@ -1,3 +1,15 @@
+
+/* Hamburger menu */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 body    {
-    background-color: white;
+    margin: 0;
+}
+
+:root {
+    --bar-width: 3.75rem;
 }
