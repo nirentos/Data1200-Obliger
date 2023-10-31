@@ -8,43 +8,98 @@
         <title>Biblioteket P35</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
             .flex-container {
-    display: flex;
-    flex-flow: nowrap;
-    text-wrap: wrap;
-    background-color: gray;
-    align-items: stretch;
-}
+                display: flex;
+                flex-wrap: nowrap;
+                text-wrap: wrap;
+                column-gap: 50px;
+                align-items: stretch;
+            }
 
-.flex-container div {
-    width: 25vw;
-    margin: 0 10px;
-    background-color: blue;
-}
+            .box {
+                border-bottom: 1px solid rgba(115, 117, 120, 0.3);
+            }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: minmax(40vw, 80vw) 20vw 0px;
-    padding: 0 10vw;
-}
+            .box div {
+                border-top: 1px solid;
+            }
 
-.grid-container > div {
-    grid-column: 1 / 3;
-}
+            footer {
+                margin-top: 5vh;
+                padding: 1vh 5vw;
+                background-color: rgba(255,213,0,255);
+            }
 
-img {
-    max-width: 100%;
-    height: auto;
+            .grid-container {
+                display: grid;;
+                gap: 15px;
+                padding: 0 10vw;
+            }
 
-}
 
-.grid-container > article {
-    grid-column: 1 / 2;
-}
+            img {
+                max-width: 100%;
+                height: auto;
 
-.grid-container > aside {
-    grid-column: 2 / 3;
-}
+            }
+
+            .grid-container > aside {
+                padding: 0px 2vw;
+                background-color: rgba(250, 238, 15, 0.2);
+                border-radius: 2vw;
+            }
+
+
+            @media (max-width: 700px) {
+                .flex-container {
+                    flex-direction: column;
+                }
+
+                .flex-container div {
+                    width: 100%;
+                }
+
+                .grid-container {
+                    grid-template-columns: 80vw;
+                }
+
+            }
+            @media (min-width: 701px) {
+
+                .flex-container {
+                    flex-direction: row;
+                
+                }
+
+                .flex-container div {
+                    width: 25vw;
+                }
+
+                .grid-container {
+                grid-template-columns: minmax(40vw, 80vw) 20vw 0px;
+                }
+
+                .grid-container > div {
+                    grid-column: 1 / 3;
+                }
+
+                .grid-container > article {
+                    grid-column: 1 / 2;
+                }
+
+                .grid-container > aside {
+                    grid-column: 2 / 3;
+                }
+
+            }
+
+
         </style>
     </head>
     <body>
@@ -61,7 +116,7 @@ img {
                     </picture>      
                     <h1>Biblioteket i P35</h1>
                     <p>Universitets biblioteket ligger i 3. etasje, og tilbyr et bredt utvalg av litteratur</p>
-                    <div class="flex-container">
+                    <div class="flex-container box">
                         <!--Legg til border på toppen, legg til padding-->    
                         <div>
                             <p><strong>Adresse</strong></p> <!--Juster grid-container > div > p > strong-->
