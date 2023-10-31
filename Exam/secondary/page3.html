@@ -14,6 +14,10 @@
                 padding: 0;
             }
 
+            p {
+                font-family: sans-serif;
+            }
+
             .flex-container {
                 display: flex;
                 flex-wrap: nowrap;
@@ -21,6 +25,7 @@
                 column-gap: 50px;
                 align-items: stretch;
             }
+
 
             .box {
                 border-bottom: 1px solid rgba(115, 117, 120, 0.3);
@@ -39,6 +44,8 @@
             .grid-container {
                 display: grid;;
                 gap: 15px;
+                margin: auto;
+                max-width: 60vw;
                 padding: 0 10vw;
             }
 
@@ -47,6 +54,10 @@
                 max-width: 100%;
                 height: auto;
 
+            }
+
+            .pictureText {
+                color: grey;
             }
 
             .grid-container > aside {
@@ -113,7 +124,8 @@
                 <div>
                     <picture> <!--Legg til <source> elements når media query har blitt etablert-->
                         <img src="https://film.oslomet.no/60445190/63994838/15bc4041cf7b9c2f047d72dd369335b1/standard/download-2-thumbnail.jpg" alt="Bilde av P35 bibliotek">
-                    </picture>      
+                    </picture>
+                    <p class="pictureText">Universitetsbilioteket i Pilestredet 35. Foto: OsloMet</p>      
                     <h1>Biblioteket i P35</h1>
                     <p>Universitets biblioteket ligger i 3. etasje, og tilbyr et bredt utvalg av litteratur</p>
                     <div class="flex-container box">
