@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
-        <meta lang="eng">
+        
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Biblioteket P35</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .flex-container {
+    display: flex;
+    flex-flow: nowrap;
+    text-wrap: wrap;
+    background-color: gray;
+    align-items: stretch;
+}
+
+.flex-container div {
+    width: 25vw;
+    margin: 0 10px;
+    background-color: blue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(40vw, 80vw) 20vw 0px;
+    padding: 0 10vw;
+}
+
+.grid-container > div {
+    grid-column: 1 / 3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.grid-container > article {
+    grid-column: 1 / 2;
+}
+
+.grid-container > aside {
+    grid-column: 2 / 3;
+}
+        </style>
     </head>
     <body>
         <header>
@@ -13,91 +54,94 @@
             </nav>
         </header>
         <!--Pilestredet Campus generelt-->
-
-        <main>
-            <img src="https://film.oslomet.no/60445190/63994838/15bc4041cf7b9c2f047d72dd369335b1/standard/download-2-thumbnail.jpg" alt="Bilde av P35 bibliotek"> 
-            <!--Placeholder, bytt til <picture> element-->
-            <h1>Biblioteket P35</h1>
-            <p>Universitets biblioteket ligger i 3. etasje, og tilbyr et bredt utvalg av litteratur</p>
-             <!--<div>en skal være flex/grid-container okei kanskje ikke grid -->
-            <div>
-                <!--Legg til border på toppen, legg til padding-->    
+            <main class="grid-container">
                 <div>
-                    <p><strong>Adresse</strong></p> <!--Juster grid-container > div > p > strong-->
-                    <p>ELLEN GLEDITSCHS HUS, Pilestredet 35, 0166 Oslo</p>
-                    <p>3. etasje</p>
-                    <p><a>Se i Google Maps</a></p> <!--grid container > div > p > a-->
+                    <picture> <!--Legg til <source> elements når media query har blitt etablert-->
+                        <img src="https://film.oslomet.no/60445190/63994838/15bc4041cf7b9c2f047d72dd369335b1/standard/download-2-thumbnail.jpg" alt="Bilde av P35 bibliotek">
+                    </picture>      
+                    <h1>Biblioteket i P35</h1>
+                    <p>Universitets biblioteket ligger i 3. etasje, og tilbyr et bredt utvalg av litteratur</p>
+                    <div class="flex-container">
+                        <!--Legg til border på toppen, legg til padding-->    
+                        <div>
+                            <p><strong>Adresse</strong></p> <!--Juster grid-container > div > p > strong-->
+                            <p>ELLEN GLEDITSCHS HUS, Pilestredet 35, 0166 Oslo</p>
+                            <p>3. etasje</p>
+                            <p><a>Se i Google Maps</a></p> <!--grid container > div > p > a-->
+                        </div>
+                        <div>
+                            <p><strong>Kontakt informasjon</strong></p> <!--Juster grid-container > div > p > strong-->
+                            <p>Telefon: 67 23 79 47</p>
+                            <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
+                        </div>
+                        <div>
+                            <p><strong>Åpningstider</strong></p> <!--Juster grid-container > div > p > strong-->
+                            <p>Åpningstider: 10:00 - 22:00</p>
+                            <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p><strong>Kontakt informasjon</strong></p> <!--Juster grid-container > div > p > strong-->
-                    <p>Telefon: 67 23 79 47</p>
-                    <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
+                <article> <!--Andre container-->
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac nisl eu libero interdum congue vel ut lorem. 
+                        Morbi vitae ante pharetra, cursus neque sed, scelerisque leo. Maecenas malesuada consectetur magna et efficitur. 
+                        Nullam ut nulla mi. Aenean tempus malesuada odio sit amet vestibulum. 
+                        Mauris fermentum enim turpis, ac eleifend nunc congue eget. Phasellus venenatis mi eget condimentum sodales. 
+                        Vestibulum euismod suscipit mauris vel interdum. Nulla finibus mauris condimentum neque laoreet luctus. 
+                        Fusce cursus enim et quam efficitur placerat. Vestibulum vitae pellentesque arcu. Suspendisse potenti. 
+                        Proin semper mi eu venenatis fringilla. Ut vehicula suscipit suscipit. Mauris ullamcorper vulputate malesuada. 
+                        Morbi eleifend dictum ex non suscipit.</p> 
+                    <p>
+                        Vivamus tempor tortor tortor. Quisque pulvinar euismod eleifend. Praesent sed pellentesque magna, vel accumsan urna. 
+                        Cras ac ipsum id urna tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                        Vivamus ornare orci dignissim justo commodo, sit amet luctus arcu maximus. Morbi at augue in elit hendrerit tempus. 
+                        Suspendisse tempor sodales ullamcorper. Donec felis erat, blandit sed sapien quis, cursus varius quam. 
+                        Duis quam orci, viverra quis fermentum at, dapibus eget ipsum. Ut malesuada vestibulum nunc, 
+                        ut mollis metus finibus eu. Nulla semper sit amet arcu et semper. Nulla ultrices magna ut volutpat condimentum.
+                    </p> 
+                </article>
+                <aside> <!--Tredje container-->
+                    <p>
+                        Quisque ultricies odio ipsum, consequat fringilla mi vestibulum ac. Integer lobortis molestie nisi, eget finibus ipsum rhoncus ut. 
+                        In sagittis vestibulum nisi id accumsan. 
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+                        Donec viverra augue a hendrerit dictum. Phasellus in ipsum quis nibh scelerisque commodo.
+                    </p>
+                    <p>
+                        Sed at libero ut odio mattis rutrum. Pellentesque sed orci nibh. 
+                        Quisque ullamcorper, tortor sit amet ullamcorper facilisis, tellus tellus dapibus risus, 
+                        a fermentum velit quam facilisis augue. Praesent a nibh malesuada, tincidunt mauris non, auctor felis. 
+                        Nulla eget lacinia velit, ut imperdiet diam. Sed tincidunt viverra libero, id egestas eros bibendum id.
+                    </p>
+                </aside>
+            </main>
+            <footer> <!--Siste container-->
+                <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
+                <!--Button: Abboner på vårt nyhetsbrev!-->
+        
+                <!--container-->
+                <div class="flex-container">
+                    <div>
+                        <p><strong>OSLO METROPOLITAN UNIVERSITY</strong></p>
+                        <p>STORYBYUNIVERSITETET</p>
+                        <p>Postboks 4, St. Olavs plass</p>
+                        <p>0130 Oslo</p>
+                        <p>Tlf.: 67 23 50 00</p>
+                        <p><a>Kontakt oss</a></p>
+                    </div>
+                    <div>
+                        <p><a>Alumni</a></p>
+                        <p><a>Ansatteoversikt</a></p>
+                        <p><a>Arrangementoversikt</a></p>
+                        <p><a>Pressekontakt</a></p>
+                    </div>
+                    <div> <!--Icon-->
+                        <p><a>Facebook</a></p>
+                        <p><a>Twitter</a></p>
+                        <p><a>LinkedIn</a></p>
+                        <p><a>Instagram</a></p>
+                    </div>
                 </div>
-                <div>
-                    <p><strong>Åpningstider</strong></p> <!--Juster grid-container > div > p > strong-->
-                    <p>Åpningstider: 10:00 - 22:00</p>
-                    <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
-                </div>  
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac nisl eu libero interdum congue vel ut lorem. 
-                    Morbi vitae ante pharetra, cursus neque sed, scelerisque leo. Maecenas malesuada consectetur magna et efficitur. 
-                    Nullam ut nulla mi. Aenean tempus malesuada odio sit amet vestibulum. 
-                    Mauris fermentum enim turpis, ac eleifend nunc congue eget. Phasellus venenatis mi eget condimentum sodales. 
-                    Vestibulum euismod suscipit mauris vel interdum. Nulla finibus mauris condimentum neque laoreet luctus. 
-                    Fusce cursus enim et quam efficitur placerat. Vestibulum vitae pellentesque arcu. Suspendisse potenti. 
-                    Proin semper mi eu venenatis fringilla. Ut vehicula suscipit suscipit. Mauris ullamcorper vulputate malesuada. 
-                    Morbi eleifend dictum ex non suscipit.</p> 
-                <p>
-                    Vivamus tempor tortor tortor. Quisque pulvinar euismod eleifend. Praesent sed pellentesque magna, vel accumsan urna. 
-                    Cras ac ipsum id urna tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-                    Vivamus ornare orci dignissim justo commodo, sit amet luctus arcu maximus. Morbi at augue in elit hendrerit tempus. 
-                    Suspendisse tempor sodales ullamcorper. Donec felis erat, blandit sed sapien quis, cursus varius quam. 
-                    Duis quam orci, viverra quis fermentum at, dapibus eget ipsum. Ut malesuada vestibulum nunc, 
-                    ut mollis metus finibus eu. Nulla semper sit amet arcu et semper. Nulla ultrices magna ut volutpat condimentum.
-                </p>           
-            </div>
-        </main>
-        <aside>
-            <p>
-                Quisque ultricies odio ipsum, consequat fringilla mi vestibulum ac. Integer lobortis molestie nisi, eget finibus ipsum rhoncus ut. 
-                In sagittis vestibulum nisi id accumsan. 
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-                Donec viverra augue a hendrerit dictum. Phasellus in ipsum quis nibh scelerisque commodo.
-            </p>
-            <p>
-                Sed at libero ut odio mattis rutrum. Pellentesque sed orci nibh. 
-                Quisque ullamcorper, tortor sit amet ullamcorper facilisis, tellus tellus dapibus risus, 
-                a fermentum velit quam facilisis augue. Praesent a nibh malesuada, tincidunt mauris non, auctor felis. 
-                Nulla eget lacinia velit, ut imperdiet diam. Sed tincidunt viverra libero, id egestas eros bibendum id.
-            </p>
-        </aside>
-        <footer>
-            <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
-            <!--Button: Abboner på vårt nyhetsbrev!-->
-
-            <!--container-->
-            <div>
-                <div>
-                    <p><strong>OSLO METROPOLITAN UNIVERSITY</strong></p>
-                    <p>STORYBYUNIVERSITETET</p>
-                    <p>Postboks 4, St. Olavs plass</p>
-                    <p>0130 Oslo</p>
-                    <p>Tlf.: 67 23 50 00</p>
-                    <p><a>Kontakt oss</a></p>
-                </div>
-                <div>
-                    <p><a>Alumni</a></p>
-                    <p><a>Ansatteoversikt</a></p>
-                    <p><a>Arrangementoversikt</a></p>
-                    <p><a>Pressekontakt</a></p>
-                </div>
-                <div> <!--Icon-->
-                    <p><a>Facebook</a></p>
-                    <p><a>Twitter</a></p>
-                    <p><a>LinkedIn</a></p>
-                    <p><a>Instagram</a></p>
-                </div>
-            </div>
-        </footer>
+            </footer>
     </body>
 </html>
