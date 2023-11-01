@@ -1,56 +1,214 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
-        <meta lang="eng">
+        
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Andrea Spiseri</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-family: sans-serif;
+            }
+
+            .flex-container {
+                display: flex;
+                flex-wrap: nowrap;
+                text-wrap: wrap;
+                column-gap: 50px;
+                align-items: stretch;
+            }
+
+
+            .box {
+                border-bottom: 1px solid rgba(115, 117, 120, 0.3);
+            }
+
+            .box div {
+                border-top: 1px solid;
+            }
+
+            footer {
+                margin-top: 5vh;
+                padding: 1vh 5vw;
+                background-color: rgba(255,213,0,255);
+            }
+
+            .grid-container {
+                display: grid;;
+                gap: 15px;
+                margin: auto;
+                max-width: 60vw;
+                padding: 0 10vw;
+            }
+
+
+            img {
+                max-width: 100%;
+                height: auto;
+
+            }
+
+            .pictureText {
+                color: grey;
+            }
+
+            .grid-container > aside {
+                padding: 0px 2vw;
+                background-color: rgba(250, 238, 15, 0.2);
+                border-radius: 2vw;
+            }
+
+
+            @media (max-width: 700px) {
+                .flex-container {
+                    flex-direction: column;
+                }
+
+                .flex-container div {
+                    width: 100%;
+                }
+
+                .grid-container {
+                    grid-template-columns: 80vw;
+                }
+
+            }
+            @media (min-width: 701px) {
+
+                .flex-container {
+                    flex-direction: row;
+                
+                }
+
+                .flex-container div {
+                    width: 25vw;
+                }
+
+                .grid-container {
+                grid-template-columns: minmax(40vw, 80vw) 20vw 0px;
+                }
+
+                .grid-container > div {
+                    grid-column: 1 / 3;
+                }
+
+                .grid-container > article {
+                    grid-column: 1 / 2;
+                }
+
+                .grid-container > aside {
+                    grid-column: 2 / 3;
+                }
+
+            }
+
+
+        </style>
     </head>
     <body>
         <header>
             <nav>
+
             </nav>
         </header>
         <!--Generelt om Andrea Spiseri-->
-        <main>
-            <!--Bildet hentet fra URL-->
-            <img src="https://sio-xp7prod-master.enonic.cloud/api/_/image/bbcdefbc-07ee-498c-a433-5956b56cded0:1d37c55f25ce4d52f29c54a9f99d703a70fd06ce/width-2048/Sio%20Mat%20og%20drikke%20-%20Foto%20Svein%20Finneide-52.jpg.jpg?quality=65" alt="Bilde fra innsiden av Spiseriet"> 
-            <h1>Andrea Spiseri</h1>
-            <h3>Spiseriet ved P32</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac nisl eu libero interdum congue vel ut lorem. 
-                Morbi vitae ante pharetra, cursus neque sed, scelerisque leo. Maecenas malesuada consectetur magna et efficitur. 
-                Nullam ut nulla mi. Aenean tempus malesuada odio sit amet vestibulum. 
-                Mauris fermentum enim turpis, ac eleifend nunc congue eget. Phasellus venenatis mi eget condimentum sodales. 
-                Vestibulum euismod suscipit mauris vel interdum. Nulla finibus mauris condimentum neque laoreet luctus. 
-                Fusce cursus enim et quam efficitur placerat. Vestibulum vitae pellentesque arcu. Suspendisse potenti. 
-                Proin semper mi eu venenatis fringilla. Ut vehicula suscipit suscipit. Mauris ullamcorper vulputate malesuada. 
-                Morbi eleifend dictum ex non suscipit.</p> 
-            <p>
-                Vivamus tempor tortor tortor. Quisque pulvinar euismod eleifend. Praesent sed pellentesque magna, vel accumsan urna. 
-                Cras ac ipsum id urna tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-                Vivamus ornare orci dignissim justo commodo, sit amet luctus arcu maximus. Morbi at augue in elit hendrerit tempus. 
-                Suspendisse tempor sodales ullamcorper. Donec felis erat, blandit sed sapien quis, cursus varius quam. 
-                Duis quam orci, viverra quis fermentum at, dapibus eget ipsum. Ut malesuada vestibulum nunc, 
-                ut mollis metus finibus eu. Nulla semper sit amet arcu et semper. Nulla ultrices magna ut volutpat condimentum.
-            </p>
-        </main>
-        <footer> <!--Footer-->
-            <div>
-                <h3>Adresse</h3>
-                <p>Pilestredet 32, 0166 Oslo</p>
-                <p>2. etasje</p>
-                <a href="https://www.google.com/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838?shorturl=1">Se i Google Maps</a>
-            </div>
-            <div>
-                <h3>Kontakt informasjon</h3>
-                <p>Telefon (kjøkken): <a href="tel:22853298">22 85 32 98</a></p>
-            </div>
-            <div>
-                <h3>Åpningstider</h3>
-                <p>Mandag - Fredag</p>
-                <p>08:00 - 15:30</p>
-            </div>           
-        </footer>
+            <main class="grid-container">
+                <div>
+                    <picture> <!--Legg til <source> elements når media query har blitt etablert-->
+                        <img src="https://sio-xp7prod-master.enonic.cloud/api/_/image/bbcdefbc-07ee-498c-a433-5956b56cded0:1d37c55f25ce4d52f29c54a9f99d703a70fd06ce/width-2048/Sio%20Mat%20og%20drikke%20-%20Foto%20Svein%20Finneide-52.jpg.jpg?quality=65" alt="Bilde fra innsiden av Spiseriet">
+                    </picture>
+                    <p class="pictureText">Andrea Spiseri. Foto: OsloMet</p>      
+                    <h1>Andrea Spiseri</h1>
+                    <p>Spiseriet ved P32 tilbyr en rekke matretter og salatbar</p>
+                    <div class="flex-container box">
+                        <!--Legg til border på toppen, legg til padding-->    
+                        <div>
+                            <h3>Adresse</h3> <!--Juster grid-container > div > p > strong-->
+                            <p>Pilestredet 32, 0166 Oslo</p>
+                            <p>2. etasje</p>
+                            <a href="https://www.google.com/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838?shorturl=1">Se i Google Maps</a> <!--grid container > div > p > a-->
+                        </div>
+                        <div>
+                            <h3>Kontakt informasjon</h3> <!--Juster grid-container > div > p > strong-->
+                            <p>Telefon (kjøkken): <a href="tel:22853298">22 85 32 98</a></p>
+                            <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
+                        </div>
+                        <div>
+                            <h3>Åpningstider</h3> <!--Juster grid-container > div > p > strong-->
+                            <p>Mandag - Fredag</p>
+                            <p>08:00 - 15:30</p>
+                        </div>
+                    </div>
+                </div>
+                <article> <!--Andre container-->
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac nisl eu libero interdum congue vel ut lorem. 
+                        Morbi vitae ante pharetra, cursus neque sed, scelerisque leo. Maecenas malesuada consectetur magna et efficitur. 
+                        Nullam ut nulla mi. Aenean tempus malesuada odio sit amet vestibulum. 
+                        Mauris fermentum enim turpis, ac eleifend nunc congue eget. Phasellus venenatis mi eget condimentum sodales. 
+                        Vestibulum euismod suscipit mauris vel interdum. Nulla finibus mauris condimentum neque laoreet luctus. 
+                        Fusce cursus enim et quam efficitur placerat. Vestibulum vitae pellentesque arcu. Suspendisse potenti. 
+                        Proin semper mi eu venenatis fringilla. Ut vehicula suscipit suscipit. Mauris ullamcorper vulputate malesuada. 
+                        Morbi eleifend dictum ex non suscipit.</p> 
+                    <p>
+                        Vivamus tempor tortor tortor. Quisque pulvinar euismod eleifend. Praesent sed pellentesque magna, vel accumsan urna. 
+                        Cras ac ipsum id urna tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                        Vivamus ornare orci dignissim justo commodo, sit amet luctus arcu maximus. Morbi at augue in elit hendrerit tempus. 
+                        Suspendisse tempor sodales ullamcorper. Donec felis erat, blandit sed sapien quis, cursus varius quam. 
+                        Duis quam orci, viverra quis fermentum at, dapibus eget ipsum. Ut malesuada vestibulum nunc, 
+                        ut mollis metus finibus eu. Nulla semper sit amet arcu et semper. Nulla ultrices magna ut volutpat condimentum.
+                    </p> 
+                </article>
+                <aside> <!--Tredje container-->
+                    <p>
+                        Quisque ultricies odio ipsum, consequat fringilla mi vestibulum ac. Integer lobortis molestie nisi, eget finibus ipsum rhoncus ut. 
+                        In sagittis vestibulum nisi id accumsan. 
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+                        Donec viverra augue a hendrerit dictum. Phasellus in ipsum quis nibh scelerisque commodo.
+                    </p>
+                    <p>
+                        Sed at libero ut odio mattis rutrum. Pellentesque sed orci nibh. 
+                        Quisque ullamcorper, tortor sit amet ullamcorper facilisis, tellus tellus dapibus risus, 
+                        a fermentum velit quam facilisis augue. Praesent a nibh malesuada, tincidunt mauris non, auctor felis. 
+                        Nulla eget lacinia velit, ut imperdiet diam. Sed tincidunt viverra libero, id egestas eros bibendum id.
+                    </p>
+                </aside>
+            </main>
+            <footer> <!--Siste container-->
+                <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
+                <!--Button: Abboner på vårt nyhetsbrev!-->
+        
+                <!--container-->
+                <div class="flex-container">
+                    <div>
+                        <p><strong>OSLO METROPOLITAN UNIVERSITY</strong></p>
+                        <p>STORYBYUNIVERSITETET</p>
+                        <p>Postboks 4, St. Olavs plass</p>
+                        <p>0130 Oslo</p>
+                        <p>Tlf.: 67 23 50 00</p>
+                        <p><a>Kontakt oss</a></p>
+                    </div>
+                    <div>
+                        <p><a>Alumni</a></p>
+                        <p><a>Ansatteoversikt</a></p>
+                        <p><a>Arrangementoversikt</a></p>
+                        <p><a>Pressekontakt</a></p>
+                    </div>
+                    <div> <!--Icon-->
+                        <p><a>Facebook</a></p>
+                        <p><a>Twitter</a></p>
+                        <p><a>LinkedIn</a></p>
+                        <p><a>Instagram</a></p>
+                    </div>
+                </div>
+            </footer>
     </body>
 </html>
