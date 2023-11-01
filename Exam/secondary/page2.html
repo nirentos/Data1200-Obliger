@@ -42,6 +42,41 @@
             font-family: sans-serif;
             padding: 10px;
         }
+        footer {
+                margin-top: 5vh;
+                padding: 1vh 5vw;
+                background-color: rgba(255,213,0,255);
+            }
+
+         .flex-container {
+                display: flex;
+                flex-wrap: nowrap;
+                text-wrap: wrap;
+                column-gap: 50px;
+                align-items: stretch;
+            }
+        .icon-container
+            {
+                display: grid;
+                align-items: center; 
+                grid-template-columns: 1fr 1fr;
+                column-gap: 7px;
+            }
+        .social-media-icon
+            {
+                max-width: 20px;
+                max-height: 20px;
+            }
+        img {
+                max-width: 100%;
+                height: auto;
+            }
+            <!--Endres senere-->
+            .social-media-link{
+                color: black;
+            }
+
+
     
         
     </style>
@@ -164,6 +199,62 @@
         vedlikeholder internettet. Kan også være negativt i forhold til de som har dagens internett, dersom det blir erstattet.
        </p>
        </div>
-    </main>
+       <footer> <!--Siste container-->
+        <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
+        <!--Button: Abboner på vårt nyhetsbrev!-->
+
+        <!--container-->
+        <div class="flex-container">
+            <div>
+                <h3>OSLO METROPOLITAN UNIVERSITY</h3>
+                <p>STORYBYUNIVERSITETET</p>
+                <p>Postboks 4, St. Olavs plass</p>
+                <p>0130 Oslo</p>
+                <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
+            </div>
+            <div>
+                <p><a href="https://www.oslomet.no/alumni">Alumni</a></p>
+                <p><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></p>
+                <p><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></p>
+                <p><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></p>
+            </div>
+            <div> <!--Icon-->
+                <ul>
+                    <li class="icon-container">
+                        <div class="social-media-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
+                        </div>
+                        <div class="social-media-link">
+                            <a href="https://www.facebook.com/oslomet/">Facebook</a>
+                        </div>
+                    </li>
+                    <li class="icon-container">
+                        <div class="social-media-icon">
+                            <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png">
+                        </div>
+                        <div class="social-media-link">
+                            <a href="https://twitter.com/oslomet">Twitter</a>
+                        </div>
+                    </li>
+                    <li class="icon-container">
+                        <div class="social-media-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/LinkedIn_icon_circle.svg">
+                        </div>
+                        <div class="social-media-link">
+                            <a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a>
+                        </div>
+                    </li>
+                    <li class="icon-container">
+                        <div class="social-media-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+                        </div>
+                        <div class="social-media-link">
+                            <a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>
