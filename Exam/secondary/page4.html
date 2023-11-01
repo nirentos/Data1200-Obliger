@@ -26,7 +26,6 @@
                 align-items: stretch;
             }
 
-
             .box {
                 border-bottom: 1px solid rgba(115, 117, 120, 0.3);
             }
@@ -53,7 +52,6 @@
             img {
                 max-width: 100%;
                 height: auto;
-
             }
 
             .pictureText {
@@ -110,7 +108,19 @@
 
             }
 
-
+            .icon-container
+            {
+                display: grid;
+                align-items: center; 
+                grid-template-columns: 1fr 1fr;
+                column-gap: 7px;
+            }
+            
+            .social-media-icon
+            {
+                max-width: 20px;
+                max-height: 20px;
+            }
         </style>
     </head>
     <body>
@@ -128,25 +138,6 @@
                     <p class="pictureText">Andrea Spiseri. Foto: OsloMet</p>      
                     <h1>Andrea Spiseri</h1>
                     <p>Spiseriet ved P32 tilbyr en rekke matretter og salatbar</p>
-                    <div class="flex-container box">
-                        <!--Legg til border på toppen, legg til padding-->    
-                        <div>
-                            <h3>Adresse</h3> <!--Juster grid-container > div > p > strong-->
-                            <p>Pilestredet 32, 0166 Oslo</p>
-                            <p>2. etasje</p>
-                            <a href="https://www.google.com/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838?shorturl=1">Se i Google Maps</a> <!--grid container > div > p > a-->
-                        </div>
-                        <div>
-                            <h3>Kontakt informasjon</h3> <!--Juster grid-container > div > p > strong-->
-                            <p>Telefon (kjøkken): <a href="tel:22853298">22 85 32 98</a></p>
-                            <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
-                        </div>
-                        <div>
-                            <h3>Åpningstider</h3> <!--Juster grid-container > div > p > strong-->
-                            <p>Mandag - Fredag</p>
-                            <p>08:00 - 15:30</p>
-                        </div>
-                    </div>
                 </div>
                 <article> <!--Andre container-->
                     <p>
@@ -181,6 +172,25 @@
                         Nulla eget lacinia velit, ut imperdiet diam. Sed tincidunt viverra libero, id egestas eros bibendum id.
                     </p>
                 </aside>
+                <div class="flex-container box">
+                    <!--Legg til border på toppen, legg til padding-->    
+                    <div>
+                        <h3>Adresse</h3> <!--Juster grid-container > div > p > strong-->
+                        <p>Pilestredet 32, 0166 Oslo</p>
+                        <p>2. etasje</p>
+                        <a href="https://www.google.com/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838?shorturl=1">Se i Google Maps</a> <!--grid container > div > p > a-->
+                    </div>
+                    <div>
+                        <h3>Kontakt informasjon</h3> <!--Juster grid-container > div > p > strong-->
+                        <p>Telefon (kjøkken): <a href="tel:22853298">22 85 32 98</a></p>
+                        <p>E-post: <a>ub.p35@oslomet.no</a></p> <!--mailto:ub.p35@oslomet.no-->
+                    </div>
+                    <div>
+                        <h3>Åpningstider</h3> <!--Juster grid-container > div > p > strong-->
+                        <p>Mandag - Fredag</p>
+                        <p>08:00 - 15:30</p>
+                    </div>
+                </div>
             </main>
             <footer> <!--Siste container-->
                 <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
@@ -189,24 +199,53 @@
                 <!--container-->
                 <div class="flex-container">
                     <div>
-                        <p><strong>OSLO METROPOLITAN UNIVERSITY</strong></p>
+                        <h3>OSLO METROPOLITAN UNIVERSITY</h3>
                         <p>STORYBYUNIVERSITETET</p>
                         <p>Postboks 4, St. Olavs plass</p>
                         <p>0130 Oslo</p>
-                        <p>Tlf.: 67 23 50 00</p>
-                        <p><a>Kontakt oss</a></p>
+                        <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
                     </div>
                     <div>
-                        <p><a>Alumni</a></p>
-                        <p><a>Ansatteoversikt</a></p>
-                        <p><a>Arrangementoversikt</a></p>
-                        <p><a>Pressekontakt</a></p>
+                        <p><a href="https://www.oslomet.no/alumni">Alumni</a></p>
+                        <p><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></p>
+                        <p><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></p>
+                        <p><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></p>
                     </div>
                     <div> <!--Icon-->
-                        <p><a>Facebook</a></p>
-                        <p><a>Twitter</a></p>
-                        <p><a>LinkedIn</a></p>
-                        <p><a>Instagram</a></p>
+                        <ul>
+                            <li class="icon-container">
+                                <div class="social-media-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
+                                </div>
+                                <div class="social-media-link">
+                                    <a href="https://www.facebook.com/oslomet/">Facebook</a>
+                                </div>
+                            </li>
+                            <li class="icon-container">
+                                <div class="social-media-icon">
+                                    <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png">
+                                </div>
+                                <div class="social-media-link">
+                                    <a href="https://twitter.com/oslomet">Twitter</a>
+                                </div>
+                            </li>
+                            <li class="icon-container">
+                                <div class="social-media-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/LinkedIn_icon_circle.svg">
+                                </div>
+                                <div class="social-media-link">
+                                    <a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a>
+                                </div>
+                            </li>
+                            <li class="icon-container">
+                                <div class="social-media-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+                                </div>
+                                <div class="social-media-link">
+                                    <a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </footer>
