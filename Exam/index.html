@@ -2,25 +2,42 @@
 
 <html>
     <head>
-        <meta lang="eng">
+        <meta lang="en">
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../Exam/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
     <body>
-     <header>
-         <label class="hamburger-menu">
-                <input type="checkbox">
-         </label>
-         <aside class="sidebar">
-         <nav>
-          <div>Topical Page</div>
-          <div>Dummy Guide to OsloMet</div>
-          <div>Dummy guide to OsloMet 2</div> 
-          <div>Accessibility</div>
-         </nav>
-         </aside>
-     </header>
-    </body>
+    </style>
+</head>
+
+<body>
+    
+
+   <div id="myNav" class="nav">
+    <a href="javascript:void(0)" class="closebtn" oneclick="closeNav()">&times;</a>
+    
+    <a href="index.html">Home Page</a>
+    <a href="page2.html">Topical Page</a>
+    <a href="page3.html">Biblioteket i P35</a>
+    <a href="page4.html">Spiseriet i P32</a>
+    <a href="page5.html">Brukervennlighet</a>
+
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" oneclick="openNav()">&#9776;open</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+        document.getElementById("myNav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+    </script>
+</body>
 </html>
