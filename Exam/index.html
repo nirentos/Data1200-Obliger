@@ -17,29 +17,18 @@
 
    <nav>
     <label for="ham-menu"></label>
-    <input id="ham-menu" type="checkbox">
-    <ul>
-        <li><a href="index.html">Home Page </li>
-        <li><a a href="page2.html">Topical Page</li>
-        <li><a href="page3.html">Biblioteket i P35"</li>
-        <li><a href="page4.html">Spiseriet i P32"/<li>
-        <li><a href="page5.html">Brukervennlighet"</li>
+    <input id="ham-menu-toggle"     type="checkbox">
+    <ul class="menu-links">
+        <li><a href="index.html">Home Page </a></li>
+        <li><a a href="page2.html">Topical Page</a></li>
+        <li><a href="page3.html">Biblioteket i P35"</a></li>
+        <li><a href="page4.html">Spiseriet i P32"</a></li>
+        <li><a href="page5.html">Brukervennlighet"</a></li>
     </ul>
 
     <div id="main">
-    <span style="font-size:30px;cursor:pointer" oneclick="openNav()">&#9776;open</span>
 </nav>
 
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
 
-        function closeNav() {
-        document.getElementById("myNav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-    }
-    </script>
 </body>
 </html>
