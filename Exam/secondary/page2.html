@@ -2,16 +2,26 @@
  <!--Topical-page.-->
 <html>
     <!--Midlertidig CSS-->
+            <!-- Link til bakgrunnsbildet: "https://unsplash.com/photos/the-stars-and-galaxy-as-seen-from-rocky-mountain-national-park-4dpAqfTbvKA" -->
+
     <style> 
-        .topicalPageBody{
-            background-color: white;
+        body{
+        margin: 0;
         }
+        .topicalPageBody{
+            background-image: url("../img/Galaxy.jpg") ;
+        }
+
         p{
             font-family: sans-serif;
             padding: 10px;
         }
+        a {
+                color:darkslategray;
+                text-decoration-color: rgba(255,213,0,255);
+            }
         .topicalPageNav{
-            background-color: orange;
+            background-color: red;
             padding-top: 1px;
             padding-right: 1px;
             padding-bottom: 1px;
@@ -19,21 +29,20 @@
         }
         .topicalPageText{
             background-color: white;
-
-            max-width: 1200px;
-
             display: grid;
-                gap: 15px;
+                gap: 1px;
                 margin: auto;
                 max-width: 60vw;
-                padding: 0vw;
+                padding: 10vw;
+                align-self: start;
+            padding-top: 5%;
         }
-        .topicalPageImage{
-            width:10%;height:10%;
+        .oslometImage{
+            width:10%;height:auto;
         }
         .sateliteImage{
-            width: 100%;height:100%;
-            margin-bottom: -25px;
+            width: 100%;height:auto;
+            margin-bottom: -20px;
         }
         .pictureText{
             color: grey;
@@ -71,12 +80,62 @@
                 max-width: 100%;
                 height: auto;
             }
-            <!--Endres senere-->
-            .social-media-link{
+            
+        .social-media-link{
                 color: black;
             }
 
+            @media (max-width: 700px){
+                .flex-container{
+                    flex-direction: column;
+                }
+                .flex-container div{
+                    width 100%;
+                }
+                .grid-container{
+                    grid-template-columns: 80vw;
+                }
+                .topicalPageText{
+                    padding: 5vw;
 
+                }
+                .textAndChartContainer{
+                    flex-direction: column;
+                }
+            }
+            @media (min-width: 701px){
+                .flex-container{
+                    flex-direction: row;
+                }
+                .flex-container div{
+                    width 25vw;
+                }
+                .grid-container{
+                    grid-template-columns: minmax(40vw, 80vw) 20vw 0px;
+                }
+                .topicalPageText{
+                    max-width: 50vw;
+                }
+                .textAndChartContainer{
+                    flex-direction: row;
+                }
+
+            }
+            .piechartImg{
+                width: 100%;
+                height: auto;
+            }
+            .textAndChartContainer{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                max-width: 60vw;
+                margin: auto;
+            
+            }
+            .piechartContainer{
+                text-align: center;
+            }
     
         
     </style>
@@ -89,12 +148,14 @@
     <body class="topicalPageBody">
        <!--Imitasjon av Oslomet sin nettside, kan være midlertidig-->
        <header class = topicalPageNav>
-            <nav class="topicalPageNav">
-            <img src="../img/OsloMetLogo1.png" alt ="Oslomet logo" class = "topicalPageImage">
+            <nav>
+                <a href="../index.html">
+                <img src="../img/OsloMetLogo1.png" alt ="Oslomet logo" class = "oslometImage" >
+                </a>
              </nav>
        </header>
-    
-        <div class = topicalPageText>
+       <main class = "grid-container">
+              <div class = topicalPageText>
         <h1>Utviklingen av digital infrastruktur</h1>
         
         <img src="../img/Starlink-Screenshot.png" alt="Starlink satelittbilde" class="sateliteImage">
@@ -157,8 +218,9 @@
         <li>Kan gjøre det enklere for noen å utføre et cyberangrep i forhold til nasjonal sikkerhet.</li>
         <li>Hvis et selskap har alle satellittene, vil de kunne få veldig mye makt i forhold til å regulere internettilgangen til store områder.</li>
        </ul>
-
-       <h3>Vil dette gjøre samfunnet bedre eller værre?</h3>
+       
+       <h3>Vil dette gjøre samfunnet bedre eller verre?</h3>
+       <div class = "textAndChartContainer">
        <p>
         Vi har diskutert denne saken frem og tilbake, og kommet frem til at vi mener dette vil få en positiv innvirkning på samfunnet.
         Det kan være både positive og negative sider med dette, som vi har nevnt tidligere. Det kan være slik at denne teknologien 
@@ -171,6 +233,13 @@
         og negative sidene av denne saken har vi kommet frem til at dersom denne teknologien blir tatt i bruk på en miljøvennlig 
         og ressurseffektiv måte, med lovfestede begrensninger, vil det ha en positiv innvirkning på samfunnet.
        </p>
+       <div class="piechartContainer">
+       <img src="../img/Piechart.png" alt="Sektordiagram som viser andelen av verdens befolkning med tilgang til internett" class = "piechartImg">
+      <p class="pictureText">
+       Andel av verdens befolkning med tilgang til internett. Data: FN Diagram: Edvard Uteng 
+      </p>
+       </div>
+       </div>
 
        <h3>Potensielle konsekvenser</h3>
        <h4>Hva kan være utilsiktede konsekvenser?</h4>
@@ -199,9 +268,10 @@
         vedlikeholder internettet. Kan også være negativt i forhold til de som har dagens internett, dersom det blir erstattet.
        </p>
        </div>
+       </main>
        <footer> <!--Siste container-->
         <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
-        <!--Button: Abboner på vårt nyhetsbrev!-->
+        <!--Button: Abonner på vårt nyhetsbrev!-->
 
         <!--container-->
         <div class="flex-container">
