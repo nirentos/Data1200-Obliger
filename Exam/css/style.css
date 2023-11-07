@@ -1,51 +1,56 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 /* Index */
 
-
 /* Hamburger menu */
-    .nav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: orange;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-    }
+nav {
+    background-color: yellow;
+}
+.menu-links{
+    display: none;
+    list-style-type: none;
+}
 
-    .nav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: black;
-        display: block;
-        transition: 0.3s;
-    }
+.menu-links li {
+    padding: 10px; 
+}
 
-    .nav a:hover {
-        color: white;
-    }
 
-    .nav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
+.menu-links a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-    #main {
-        transition: margin-left .5s;
-        padding: 20px;
-    }
+.menu-links a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
 
-    @media screen and (max-height: 450px) {
-        .nav {padding-top: 15px;}
-        .nav a{font-size: 18px;}
-    }
+#ham-menu-toggle {
+    display: none;
+    
+}
+
+nav label {
+    cursor: pointer;
+
+}
+
+#ham-menu-toggle:checked ~ .menu-links{
+    display: block;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.ham-icon{
+    width: 60px;
+    height: 60px;
+}
