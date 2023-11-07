@@ -15,18 +15,20 @@
 <body>
     
 
-   <div id="myNav" class="nav">
-    <a href="javascript:void(0)" class="closebtn" oneclick="closeNav()">&times;</a>
-    
-    <a href="index.html">Home Page</a>
-    <a href="page2.html">Topical Page</a>
-    <a href="page3.html">Biblioteket i P35</a>
-    <a href="page4.html">Spiseriet i P32</a>
-    <a href="page5.html">Brukervennlighet</a>
+   <nav>
+    <label for="ham-menu"></label>
+    <input id="ham-menu" type="checkbox">
+    <ul>
+        <li><a href="index.html">Home Page </li>
+        <li><a a href="page2.html">Topical Page</li>
+        <li><a href="page3.html">Biblioteket i P35"</li>
+        <li><a href="page4.html">Spiseriet i P32"/<li>
+        <li><a href="page5.html">Brukervennlighet"</li>
+    </ul>
 
     <div id="main">
     <span style="font-size:30px;cursor:pointer" oneclick="openNav()">&#9776;open</span>
-    </div>
+</nav>
 
     <script>
         function openNav() {
