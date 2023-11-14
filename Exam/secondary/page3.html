@@ -2,19 +2,24 @@
 
 <html lang="en">
     <head>
-        
+        <!--Metadata og lenke til stylesheet-->
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../CSS/style.css">
         <title>Biblioteket P35</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <!--Seksjon for øverste del av siden-->
         <header>
+            <!--Navigasjonsmeny-->
             <nav>
+                <!--"Hamburger" ikon-->
                 <label for="ham-menu-toggle">
                     <img class="ham-icon" srcset="../img/hamburger-icon.png">
                 </label>
+                <!--Skjult "checkbox" for hamburgermeny-->
                 <input id="ham-menu-toggle"     type="checkbox">
+                <!--Navigasjonlenker-->
                 <ul class="menu-links">
                     <li><a href="../index.html">Home Page </a></li>
                     <li><a a href="page2.html">Topical Page</a></li>
@@ -24,28 +29,35 @@
                 </ul>
                 </nav>
         </header>
+        <!--Hovedseksjon for innholdet-->
         <main>
+            <!--Sidedel-->
             <aside>
-                <h2>Contents</h2>
-                <ul>
-                    <li><a href="#top">Biblioteket i P35</a>
-                        <ul>
-                            <li><a href="#1">Beliggenhet</a></li>
-                            <li><a href="#2">Utvalget</a></li>
-                            <li><a href="#3">Utstyr og verktøy</a></li>
-                            <li><a href="#4">Arrangementer</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <!--Innholdsliste-->
+                <div>
+                    <h2>Contents</h2>
+                    <ul>
+                        <li><a href="#top">Biblioteket i P35</a>
+                            <ul>
+                                <li><a href="#1">Beliggenhet</a></li>
+                                <li><a href="#2">Utvalget</a></li>
+                                <li><a href="#3">Utstyr og verktøy</a></li>
+                                <li><a href="#4">Arrangementer</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </aside>
+            <!--Artikkel-->
             <article class="bottomLine">
+                <!--Introduksjon med linje på bunnen for å separere innholdet-->
                 <div class="bottomLine">
                     <img src="../img/PersonLeser.jpg" alt="Jente som leser i biblioteket">
                     <p class="pictureText">Universitetsbilioteket i Pilestredet 35. Foto: OsloMet</p>      
                     <h1 id="top">Biblioteket i P35</h1>
                     <p>Universitets biblioteket ligger i 3. etasje, og tilbyr et bredt utvalg av litteratur</p>
                 </div>
-                
+                <!--Beliggenhet-->
                 <div>
                     <h2 id="1">Beliggenhet</h2>
                     <p>
@@ -58,9 +70,10 @@
                         Proin semper mi eu venenatis fringilla. Ut vehicula suscipit suscipit. Mauris ullamcorper vulputate malesuada. 
                         Morbi eleifend dictum ex non suscipit.</p> 
                 </div>
-
+                <!--Teksten deles i to kolonner for denne seksjonen-->
                 <div class="twoColumns">
                     <div>
+                        <!--Fortsettelse på beliggenhet og info om utvalget i én kolonne-->
                         <p>
                             Vivamus tempor tortor tortor. Quisque pulvinar euismod eleifend. Praesent sed pellentesque magna, vel accumsan urna. 
                             Cras ac ipsum id urna tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -81,6 +94,7 @@
                             Morbi eleifend dictum ex non suscipit.
                         </p>
                     </div>
+                    <!-- I andre kolonne: Gul boks med "ekstra" innhold om bygget og et bilde-->
                     <div class="yellow box">
                         <div>
                             <img src="../img/P35.jpg" alt="Bilde av utsiden av Pilestredet 35 bygget">
@@ -92,8 +106,9 @@
                                 Nulla eget lacinia velit, ut imperdiet diam. Sed tincidunt viverra libero, id egestas eros bibendum id.
                             </p>
                         </div>
+                    </div>
                 </div>
-                </div>
+                <!--Utstyr og verktøy og arrangementer-->
                 <div>
                     <h2 id="3">Utstyr og verktøy</h2>
                     <p>
@@ -129,17 +144,18 @@
                     </p>
                 </div>
             </article>
+            <!--Seksjon som gir info om diverse små detaljer-->
             <section class="flexContainer box white">
                 <div>
                     <h3>Adresse</h3> 
                     <p>ELLEN GLEDITSCHS HUS, Pilestredet 35, 0166 Oslo</p>
                     <p>3. etasje</p>
-                    <p>Se i <a href="https://www.google.com/maps/place/OsloMet+-+Biblioteket+P35/@59.919548,10.7353733,15z/data=!4m2!3m1!1s0x0:0x1999a7ebc1b332a3?sa=X&ved=2ahUKEwi58JSmy7KCAxVmRPEDHbapBDsQ_BJ6BAhVEAA" title="Link to Google Maps">Google Maps</a></p> 
+                    <p>Se i <a href="https://www.google.com/maps/place/OsloMet+-+Biblioteket+P35/@59.919548,10.7353733,15z/data=!4m2!3m1!1s0x0:0x1999a7ebc1b332a3?sa=X&ved=2ahUKEwi58JSmy7KCAxVmRPEDHbapBDsQ_BJ6BAhVEAA" title="Lenke til Google Maps">Google Maps</a></p> 
                 </div>
                 <div>
                     <h3>Kontakt informasjon</h3> 
                     <p>Telefon: <a href="tel:67237947">67 23 79 47</a></p>
-                    <p>E-post: <a href="mailto:ub.p35@oslomet.no">ub.p35@oslomet.no</a></p> 
+                    <p>E-post: <a href="mailto:ub.p35@oslomet.no" title="Lenke til OsloMet's P35 e-post">ub.p35@oslomet.no</a></p> 
                 </div>
                 </div>
                 <div>
@@ -150,11 +166,14 @@
             </section>
     
         </main>
+        <!--Footer seksjon-->
         <footer>
+            <!--Seksjon for bunnlinjen-->
             <div class="flexContainer bottomLine">
                 <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2>
                 <a href="https://www.oslomet.no/nyhetsbrev" class="button box">Abonner på vårt nyhetsbrev!</a>
             </div>
+            <!--Kontaktinformasjon og lenker til Oslomet sine offisielle sosiale medier-->
             <div class="flexContainer">
                 <div>
                     <h3>OSLO METROPOLITAN UNIVERSITY</h3>
@@ -164,13 +183,14 @@
                     <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
                 </div>
                 <div>
-                    <p><a href="https://www.oslomet.no/alumni">Alumni</a></p>
-                    <p><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></p>
-                    <p><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></p>
-                    <p><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></p>
+                    <p><a href="https://www.oslomet.no/alumni" title="Til alumni siden">Alumni</a></p>
+                    <p><a href="https://www.oslomet.no/om/ansatteoversikt" title="Ansatteoversikt">Ansatteoversikt</a></p>
+                    <p><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt" title="Lenke til arrangementoversikt">Arrangementoversikt</a></p>
+                    <p><a href="https://www.oslomet.no/om/pressekontakt" title="Lenke til side om pressekontakt">Pressekontakt</a></p>
                 </div>
                 <div>
                     <ul>
+                        <!--Ikon container for sosiale medier ikoner-->
                         <li class="icon-container">
                             <div class="social-media-icon">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">

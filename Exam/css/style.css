@@ -1,48 +1,57 @@
+/* Resetter nettleser "defaults" og setter bakgrunnsfarge */
 body {
     margin: 0;
     padding: 0;
     background-color: rgba(255,213,0, 0.1);
 }
 
+/* Setter et bakgrunnsbilde for page2.html: Topical page */
 .backgroundImage {
     background-image: url(../img/Galaxy.jpg);
     background-size: cover;
 }
 
+/* Deler "main" seksjonen i et CSS grid */
 main {
     display: grid;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-
+/* Setter bakgrunnsfargen til artikkelen og div descendants til klassen .white til hvit */
 article, .white div {
     background-color: white;
 }
 
+/* Fjerner "bullet-point"-en til list elementene i <aside> */
 aside li {
     list-style: none;
     line-height: 2rem;
 }
 
+/* "universalt" padding for all form for tekst enn så lenge */
 h1, h2, h3, p, ul {
     padding: 0px 10px;
 }
 
+/* Bilder tar opp full bredde av "parent" elementet og høyden automatisk tilfredstiller bredden */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* Gjør bildetekst grå og trekker teksten vertikalt nærmere bildet*/
 .pictureText {
-    margin: 0;
+    margin: 0px inherit;
     color: gray;
 }
 
+/* Lager et diskret border på bunnen av innholdet */
 .bottomLine {
     border-bottom: 1px solid rgba(115, 117, 120, 0.3)
 }
 
+/* Setter lenke tekst til svart med gul linje under*/
 a {
     font-weight: 600;
     color:black;
@@ -51,32 +60,34 @@ a {
     text-underline-offset: 3.5px;
 }
 
+/* Linje under lenke bytter fra gult til svart når pekeren er på lenken */
 a:hover {
     text-decoration-color:black;
 }
 
+/* Elementer med klassen <.box>, og klassen's descendants <div>, <p> og <ul> får en avrundet box */
 .box, .box > div, .box > p, .box ul {
     border-radius: 15px;
     padding: 10px;
 }
 
+/* Setter <p> og <div> descendants' bakgrunnsfarge til gul*/
 .yellow > p, .yellow div {
     background-color: rgba(254,212,0, 0.5);
-}
-
-.yellow > div {
     margin: 10px;
 }
 
+/* Lager grunnlag for flex-container */
 .flexContainer {
     display: flex;
 }
 
+/* Setter nav-barens og footerens bakgrunnsfarge til OsloMets farge */
 nav, footer {
     background-color: rgba(255,213,0,255);
 }
 
-
+/* Svart knapp som fører til nyhetsbrevet */
 .button {
     text-decoration-color: black;
     background-color: black;
@@ -90,6 +101,7 @@ nav, footer {
     margin-left: auto;
 }
 
+/* Container for sosial medie lenke */
 .icon-container
 {
     padding: 10px;
@@ -98,7 +110,7 @@ nav, footer {
     align-items: center;
 }
 
-
+/* Setter høyde og bredde til ikonet */
 .social-media-icon
 {
     max-width: 20px;
@@ -106,14 +118,15 @@ nav, footer {
 
 }
 
+/* Fjerner mellomrommet til venstre slik at listen av sosial medie lenkene er på linje med resten av flex-container elementene */
 footer > ul {
     padding-left: 0px;
 }
 
 
-
+/* CSS deklarasjoner som kun gjelder når vinduet er under eller lik 700px */
 @media (max-width: 700px) {
-
+    /* Flex items følger en loddrett oppstilling, dvs. lenker i footer og seksjonen for ekstra detaljer*/
     .flexContainer {
         flex-flow: column;
         row-gap: 10px;
@@ -122,49 +135,59 @@ footer > ul {
 }
 
 @media (min-width: 701px) {
+    /* Deler <main> inn i 3 kolonner, der side-kolonnene tar opp 20% av viewporten og midt-delen justerer automatisk etter gjenstående plass */
     main {
-        display: grid;
         grid-template-columns: 20vw auto 20vw;
     }
 
+    /* Seksjon for små detaljer tar opp kolonnen i midten og siste rad, space-evenly verdien setter lik mengde plass mellom flex-elementene */
     section {
         grid-column: 2 / 3;
         grid-row: 2;
         justify-content: space-evenly;
     }
 
+    /* Artikkelen tar opp kolonnen i midten, men i første rad */
     article {
         grid-column: 2 / 3;
         grid-row: 1;
     }
 
+    /*<aside> er innholdsfortegnelsen og tar opp første kolonne, første rad. 
+    Posisjonen er satt til fixed slik at brukeren har adgang til innholdsfortegnelsen hvor som helst på siden  */
     aside {
         grid-column: 1 / 2;
         grid-row: 1;
         position: fixed;
     }
 
+    /* Flex items følger en vannrett oppstilling*/
     .flexContainer {
         flex-direction: row;
         column-gap: 10px;
     }
 
+    /* Flex items tar opp 30% av foreldreelementet's bredde */
     .flexContainer > div {
         width: 30%;
     }
-
+    
+    /* Flex-elementene tar opp hele bredden, men med mellomrom mellom seg */
     footer > div {
         justify-content: space-between;
     }
-
+    
+    /* Elementer med klassen får sine descendants delt inn i to kolonner, 
+    der første kolonne tar opp 50% til 80% av bredden og den andre justerer automatisk etter gjenstående plass  */
     .twoColumns {
         display: grid;
         gap: 10px;
         grid-template-columns: min(50%, 80%) auto;
     }
     
+    /* Relevant for topical page, og tar opp tredje kolonne, første rad: Viser en liste med potensielle konsekvenser*/
     .konsekvenser {
-        grid-row: 1 / 2;
+        grid-row: 1;
         grid-column: 3 / 4;
     }
 
@@ -175,11 +198,14 @@ footer > ul {
 
 
 /* Nav bar */
+
+/* Fjerner bullet-point til liste elementene i navigasjonsbaren */
 .menu-links{
     display: none;
     list-style-type: none;
 }
 
+/* Setter font-størrelse og padding til lenkene */
 .menu-links li {
     font-size: 1.3rem;
     padding: 10px; 
@@ -188,7 +214,6 @@ footer > ul {
 
 #ham-menu-toggle {
     display: none;
-    
 }
 
 nav label {
