@@ -200,7 +200,7 @@ footer > ul {
 /* Nav bar */
 
 /* Fjerner bullet-point til liste elementene i navigasjonsbaren */
-.menu-links{
+.menu-links {
     display: none;
     list-style-type: none;
 }
@@ -211,23 +211,23 @@ footer > ul {
     padding: 10px; 
 }
 
-
+/* Skjuler checkboxen */
 #ham-menu-toggle {
     display: none;
 }
 
+/* Pointer-markør når man skal trykke på navigasjonsbar-ikonet */
 nav label {
     cursor: pointer;
-
 }
 
-#ham-menu-toggle:checked ~ .menu-links{
+/* Hvordan innholdet i navigasjonsbaren skal fremstilles */
+#ham-menu-toggle:checked ~ .menu-links {
     display: block;
 }
 
-.ham-icon{
+/* Størrelsen til navigasjonsbar-konet */
+.ham-icon {
     width: 60px;
     height: 60px;
 }
-
-
