@@ -242,9 +242,8 @@ nav label {
     height: 60px;
 }
 
- /*Start slideshow stuff*/
-        
- .slideshow-container {
+/*Start slideshow elementer fra: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow*/        
+.slideshow-container {
     position: relative;
     margin: auto;
 }
@@ -308,5 +307,3 @@ nav label {
     from {opacity: .4}
     to {opacity: 1}
 }
-
-/*Slutt Slideshow stuff*/
