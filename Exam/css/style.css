@@ -32,7 +32,6 @@ aside li {
 /* "universalt" padding for all form for tekst enn så lenge */
 h1, h2, h3, h4, h5, p, ul {
     padding: 0px 10px;
-    word-break: break-all;
 }
 
 /* Bilder tar opp full bredde av "parent" elementet og høyden automatisk tilfredstiller bredden */
@@ -70,7 +69,7 @@ a:hover {
 /* Elementer med klassen <.box>, og klassen's descendants <div>, <p> og <ul> får en avrundet box */
 .box, .box > div, .box > p, .box ul {
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
 }
 
 /* Setter <p> og <div> descendants' bakgrunnsfarge til gul*/
@@ -136,10 +135,18 @@ footer > ul {
     }
 }
 
+/* CSS deklarasjoner som kun gjelder når vinduet er større enn 700px og mindre enn 900px */
+@media (max-width: 900px) and (min-width: 700px) {
+    body {
+        word-break: break-all; /* Forhindrer at ord "klipper" utover borderen,
+         men heller deler opp ordet inn i en ny linje */
+    }
+}
+
 @media (min-width: 701px) {
     /* Deler <main> inn i 3 kolonner, der side-kolonnene tar opp 20% av viewporten og midt-delen justerer automatisk etter gjenstående plass */
     main {
-        grid-template-columns: minmax(25vw, 30vw) auto minmax(20vw, 30vw);
+        grid-template-columns: 25vw auto 25vw;
     }
 
     /* Seksjon for små detaljer tar opp kolonnen i midten og siste rad, space-evenly verdien setter lik mengde plass mellom flex-elementene */
