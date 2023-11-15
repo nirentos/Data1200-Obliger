@@ -42,9 +42,9 @@ img {
 
 /* Gjør bildetekst grå og trekker teksten vertikalt nærmere bildet*/
 .pictureText {
+    font-style: italic;
     margin: 0px inherit;
     color: black;
-    font-style: italic;
 }
 
 /* Lager et diskret border på bunnen av innholdet */
