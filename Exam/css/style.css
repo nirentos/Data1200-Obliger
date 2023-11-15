@@ -32,6 +32,7 @@ aside li {
 /* "universalt" padding for all form for tekst enn så lenge */
 h1, h2, h3, h4, h5, p, ul {
     padding: 0px 10px;
+    word-break: break-all;
 }
 
 /* Bilder tar opp full bredde av "parent" elementet og høyden automatisk tilfredstiller bredden */
@@ -138,7 +139,7 @@ footer > ul {
 @media (min-width: 701px) {
     /* Deler <main> inn i 3 kolonner, der side-kolonnene tar opp 20% av viewporten og midt-delen justerer automatisk etter gjenstående plass */
     main {
-        grid-template-columns: 20vw auto 20vw;
+        grid-template-columns: minmax(25vw, 30vw) auto minmax(20vw, 30vw);
     }
 
     /* Seksjon for små detaljer tar opp kolonnen i midten og siste rad, space-evenly verdien setter lik mengde plass mellom flex-elementene */
