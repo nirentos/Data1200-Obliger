@@ -4,117 +4,13 @@
     <head>
         <meta lang="no">
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/html" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
 
-    <style>
-        /*Start Universalt fra Daniel*/
-        body {
-                margin: 0;
-                padding: 0;
-            }
-
-        p {
-            font-family: sans-serif;
-        }
-
-        .flex-container {
-            display: flex;
-            flex-wrap: nowrap;
-            text-wrap: wrap;
-            column-gap: 50px;
-            align-items: stretch;
-        }
-
-
-        .box {
-            border-bottom: 1px solid rgba(115, 117, 120, 0.3);
-        }
-
-        .box div {
-            border-top: 1px solid;
-        }
-
-        footer {
-            margin-top: 5vh;
-            padding: 1vh 5vw;
-            background-color: rgba(255,213,0,255);
-        }
-
-        .grid-container {
-            display: grid;;
-            gap: 15px;
-            margin: auto;
-            max-width: 60vw;
-            padding: 0 10vw;
-        }
-
-
-        img {
-            max-width: 100%;
-            height: auto;
-
-        }
-
-        .pictureText {
-            color: grey;
-        }
-
-        .grid-container > aside {
-            padding: 0px 2vw;
-            background-color: rgba(250, 238, 15, 0.2);
-            border-radius: 2vw;
-        }
-
-
-        @media (max-width: 700px) {
-            .flex-container {
-                flex-direction: column;
-            }
-
-            .flex-container div {
-                width: 100%;
-            }
-
-            .grid-container {
-                grid-template-columns: 80vw;
-            }
-
-        }
-        @media (min-width: 701px) {
-
-            .flex-container {
-                flex-direction: row;
-            
-            }
-
-            .flex-container div {
-                width: 25vw;
-            }
-
-            .grid-container {
-            grid-template-columns: minmax(40vw, 80vw) 20vw 0px;
-            }
-
-            .grid-container > div {
-                grid-column: 1 / 3;
-            }
-
-            .grid-container > article {
-                grid-column: 1 / 2;
-            }
-
-            .grid-container > aside {
-                grid-column: 2 / 3;
-            }
-
-        }
-        /*Slutt Universalt fra Daniel*/
-
+   <style>
         /*Start slideshow stuff*/
         
         .slideshow-container {
-            max-width: 1000px;
             position: relative;
             margin: auto;
         }
@@ -184,114 +80,194 @@
 
     <body>
         <header>
+            <!--Navigasjonsmeny-->
             <nav>
-
+                <!--"Hamburger" ikon-->
+                <label for="ham-menu-toggle">
+                    <img class="ham-icon" alt="Ikonet for menyen som lar deg navigere mellom nettsidene" srcset="../img/hamburger-icon.png">
+                </label>
+                <!--Skjult "checkbox" for hamburgermeny-->
+                <input id="ham-menu-toggle"     type="checkbox">
+                <!--Navigasjonlenker-->
+                <ul class="menu-links">
+                    <li><a href="../index.html">Home Page </a></li>
+                    <li><a a href="page2.html">Topical Page</a></li>
+                    <li><a href="page3.html">Biblioteket i P35</a></li>
+                    <li><a href="page4.html">Spiseriet i P32</a></li>
+                    <li><a href="page5.html">Brukervennlighet</a></li>
+                </ul>
             </nav>
         </header>
 
-        <main class="grid-container">
-            <div>
-                <h1>Brukervennlighet</h1>
-
-                <h2>Design Valg</h2>
-                <p>
-                    Utviklingen av disse sidene ble startet 25.10.2023 i forbindelse med eksamen i Data1200. <br>
-                    Titler: Alle overskrifter settes med h1,h2,h3,.. For å gjøre det enkelt for brukeren å hoppe i innholdet. Man starter alltid med h1. <br>
-                    Lenkenavn: Skal indikere på godt hvis hva de linker til. Lenken skal maks bruke 5 ord.
-                </p>
-
-                 
-            </div>
-            
-            <article> <!--Andre container-->
-                <h3>Automatisk Testing Av Brukervennlighet</h3>
-                <p>
-                    iubdealy aiuygbd ugauyw njuhay ksbahbb havvfty jhyavbw dkhyawb sndaub wahgvwshjd ,a kgwvdvakywgva s kdkgvqwvg dagvwbsvkdgav
-                </p>
-                <p>
-                    uyagjhsbkhjf auywgvgdv ggavwgw ga hs dgvajh whuygvd ahv jhgva gjgw
-                </p>
-                <p>
-                    ybahwb uhbadjy iybaw iubwdhba ihsbb hw wdv uyha w iha bwdbwh ajuawjhd  aiuhbdw ijhabw
-                </p>
-            </article>
-            <aside> <!--Tredje container-->
-                <h3>Lighthouse for Google Chrome</h3>
-                <p>
-                    er et open-source, automatisert redskap som benyttes for å forbedring kvaliteten av nettsider. 
-                    Redskapet kan brukes til å teste alle nettsider, offentlig ,eller privat og kan teste has ytelse, tilgjengelighet, progressive nettapplikasjoner, SEO, og mer.
-                </p>
-                <p>
-                    
-                </p>
+        <main>
+            <!--Sidedel-->
+            <aside>
+                <!--Innholdsliste-->
+                <div>
+                    <h2>Innhold</h2>
+                    <ul>
+                        <li><a href="#top">Brukervennlighet</a>
+                            <ul>
+                                <li><a href="#1">Design Valg</a></li>
+                                <li><a href="#2">Testing</a></li>
+                                <li><a href="#3">Resultater</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </aside>
+            <article class="bottomLine"> <!--Andre container-->
+                <div class="bottomLine">
+                    <h1 id="top">Brukervennlighet</h1>
 
-            <div>
-                <h3>Resultater Fra Lighthouse Test</h3>
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <h4>Test Nummer 1</h4>
-                        <!-- <div class="numbertext">1 / 3</div> -->
-                        <img src="../img/accessibilityTestPlaceholder.png" alt="Ett skjermbilde av resultatene fra første automatiske test av nettsiden gjennom Lighthouse">
-                        <p>Test informasjon endringer som ble gjort i etterkant</p>
-                        <div class="text">Lighthouse test 1 av 3</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <h4>Test Nummer 2</h4>
-                        <!-- <div class="numbertext">2 / 3</div> -->
-                        <img src="../img/OsloMetLogo1.png" alt="Ett skjermbilde av resultatene fra første automatiske test av nettsiden gjennom Lighthouse">
-                        <p>Test informasjon endringer som ble gjort i etterkant</p>
-                        <div class="text">Lighthouse test 2 av 3</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <h4>Test Nummer 3</h4>
-                        <!-- <div class="numbertext">3 / 3</div> -->
-                        <img src="../img/accessibilityTestPlaceholder.png" alt="Ett skjermbilde av resultatene fra første automatiske test av nettsiden gjennom Lighthouse">
-                        <p>Test informasjon endringer som ble gjort i etterkant</p>
-                        <div class="text">Lighthouse test 3 av 3</div>
-                    </div>
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+                    <h2 id="1">Design Valg</h2>
+                    <p>
+                        <em>Utviklingen av disse sidene ble startet 25.10.2023 i forbindelse med eksamen i Data1200.</em>
+                    </p>
+                    <p>
+                        Brukervennlig web-design begynner med et fokus på klart og konsist innhold. Informasjon skal brytes ned 
+                        i godt organiserte seksjoner med beskrivende overskrifter, som gjør det enkelt å navigere siden for alle brukere.
+                        Bruken av semantisk HTML for å strukturere innhold på en logisk måte gjør det enkelt for skjermlesere å tolke og 
+                        formidle informsjon på et nøyaktig hvis. Hvis man sørger for at nettstedet er tastaturvennlig vil brukere kunne 
+                        navigere uten å kun måtte stole på en datamus.
+                    </p>
+                    <p>
+                        Ved å implementere intuitive og konsistente navigasjonsmenyer vil den generelle brukeropplevelsen blir forbedret 
+                        til fordel for med mobilitets- eller fingerferdighetsutfordringer.
+                    </p>
+                    <p>
+                        Et annet viktig aspekt ved brukervennlig webdesign er å tilby alternativ tekst til bilder. Dette gjør man ved å inkludere 
+                        beskrivende og meningsfulle alt-attributter for å formidle innholdet og funksjonen til bilder, slik at brukere med synshemminger
+                        kan forstå konteksten. Man vil også kunne forbedre bruker opplevelsen for disse brukerne ved å strebe etter fargekontraster som 
+                        oppfyller tilgjengelighetsstandarder.
+                    </p>
                 </div>
-        
-                <br>
-        
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+
+                <div>
+                    <div>
+                        <h3 id="2">Testing Av Nettsidenes Brukervennlighet</h3>
+                        <p>
+                            WAVE, web accessibility evaluation tool, er redskapet som har blitt brukt til å teste brukervennligheten til 
+                            disse nettsidene. Det har ble gjort 2 tester av hver .html side og slideshowet: <em>Resultater Fra Lighthouse Test</em> 
+                            viser resultatene for page3.html, Biblioteket i P35.
+                        </p>
+                        <p>
+                            <b><em>Hva er WAVE?</em></b>
+                        </p>
+                        <p>
+                            WAVE, som beskrevet på WAVE sin hjelp side, er en pakke med verktøy som hjelper deg med å gjøre innholdet på nettsiden din mer tilgjengelig. 
+                            WAVE kan ikke fortelle deg om nettinholdet ditt er tilgjengelig, bare et menneske kan bestemme sann tilgjengelighet, men WAVE kan 
+                            hjelpe deg som menneske med å vurdere tilgjengeligheten til innholdet på nettsiden din.
+                        </p>
+                    </div>
                 </div>
-            </div>
+
+                <div>
+                    <h4 id="3">Resultater Fra WAVE Test</h4>
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <h5>Test Nummer 1</h5>
+                            <!-- <div class="numbertext">1 / 3</div> -->
+                            <img src="../gifs/WAVE_test_1.gif" alt="Ett skjermopptak av resultatene fra første automatiske test av nettsiden gjennom WAVE">
+                            <p>
+                                Testen viser at siden mangler alternativ tekst på en del ikoner og logoer. Videre kan en se at bildeteksten 
+                                har lav kontrast mot bakgrunnen. Det som ikke er synlig på gif-en men som testen også forteller oss er at 
+                                rekkefølgen på navigasjons elementene er strukturert korrekt og at det samme gjelder header elementene.
+                            </p>
+                            <p>
+                                For å løse disse problemene har vi gått inn å lagt til alternativ tekst der det manglet i tilegg til å ha
+                                endret bildeteksten fra å ha annen skriftfarge til å heller stå i kursiv.
+                            </p>
+                            <div class="text">WAVE test 1 av 2</div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <h5>Test Nummer 2</h5>
+                            <!-- <div class="numbertext">2 / 3</div> -->
+                            <img src="../gifs/WAVE_test_2.gif" alt="Ett skjermopptak av resultatene fra andre automatiske test av nettsiden gjennom WAVE">
+                            <p>
+                                Testen viser at problemene som ble pekt ut i forrige test er løst og at ingen nye problemer har oppstått. Gjennom egen 
+                                observasjon har det derimot blitt oppdaget enkelte skrivefeil og tilfeldig bruk av fremmedord.
+                            </p>
+                            <p>
+                                For å løse disse problemene har vi gått inn å luket ut de skrivefeilene som var observert og byttet ut fremmedordene med 
+                                tilsvarende norske ord/uttrykk.
+                            </p>
+                            <div class="text">WAVE test 2 av 2</div>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+                    </div>
+            
+                    <br>
+            
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+            </article>
         </main>
 
         <footer> <!--Siste container-->
-            <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2> <!--Border button-->
-            <!--Button: Abboner på vårt nyhetsbrev!-->
-    
-            <!--container-->
-            <div class="flex-container">
+            <!--Seksjon for bunnlinjen-->
+            <div class="flexContainer bottomLine">
+                <h2>Hold deg oppdatert på hva som skjer på OsloMet.</h2>
+                <!--Knapp som tar deg til Oslomet sin offisielle side for å abonnere på nyhetsbrev-->
+                <a href="https://www.oslomet.no/nyhetsbrev" class="button box">Abonner på vårt nyhetsbrev!</a>
+            </div>
+            <!--Kontaktinformasjon og lenker til Oslomet sine offisielle sosiale medier-->
+            <div class="flexContainer">
                 <div>
-                    <p><strong>OSLO METROPOLITAN UNIVERSITY</strong></p>
+                    <h3>OSLO METROPOLITAN UNIVERSITY</h3>
                     <p>STORYBYUNIVERSITETET</p>
                     <p>Postboks 4, St. Olavs plass</p>
                     <p>0130 Oslo</p>
-                    <p>Tlf.: 67 23 50 00</p>
-                    <p><a>Kontakt oss</a></p>
+                    <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
                 </div>
                 <div>
-                    <p><a>Alumni</a></p>
-                    <p><a>Ansatteoversikt</a></p>
-                    <p><a>Arrangementoversikt</a></p>
-                    <p><a>Pressekontakt</a></p>
+                    <p><a href="https://www.oslomet.no/alumni">Alumni</a></p>
+                    <p><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></p>
+                    <p><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementoversikt</a></p>
+                    <p><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></p>
                 </div>
-                <div> <!--Icon-->
-                    <p><a>Facebook</a></p>
-                    <p><a>Twitter</a></p>
-                    <p><a>LinkedIn</a></p>
-                    <p><a>Instagram</a></p>
+                <div> 
+                    <!--Ikon container for sosiale medier ikoner-->
+                    <ul>
+                        <li class="icon-container">
+                            <div class="social-media-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Facebook logoen">
+                            </div>
+                            <div class="social-media-link">
+                                <a href="https://www.facebook.com/oslomet/">Facebook</a>
+                            </div>
+                        </li>
+                        <li class="icon-container">
+                            <div class="social-media-icon">
+                                <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="X/Twitter logoen">
+                            </div>
+                            <div class="social-media-link">
+                                <a href="https://twitter.com/oslomet">Twitter</a>
+                            </div>
+                        </li>
+                        <li class="icon-container">
+                            <div class="social-media-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/LinkedIn_icon_circle.svg" alt="Linkedin logoen">
+                            </div>
+                            <div class="social-media-link">
+                                <a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a>
+                            </div>
+                        </li>
+                        <li class="icon-container">
+                            <div class="social-media-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logoen">
+                            </div>
+                            <div class="social-media-link">
+                                <a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>
